@@ -498,7 +498,7 @@ string_clear = ""
 
 1、使用 `+` 或者 `+=` 连接字符串
 
-使用 `+` 或者 `+=` 连接字符串，要求右边的参数必须为字符串的切片引用（Slice）类型。其实当调用 `+` 的操作符时，相当于调用了 `std::string` 标准库中的 [`add()`](https://doc.rust-lang.org/std/string/struct.String.html#method.add) 方法，这里 `add()` 方法的第二个参数是一个引用的类型。因此我们在使用 `+`， 必须传递切片引用类型。不能直接传递 `String` 类型。**`+` 和 `+=` 都是返回一个新的字符串。所以变量声明可以不需要 `mut` 关键字修饰**。
+使用 `+` 或者 `+=` 连接字符串，要求右边的参数必须为字符串的切片引用（Slice）类型。其实当调用 `+` 的操作符时，相当于调用了 `std::string` 标准库中的 [`add()`](https://doc.rust-lang.org/std/string/struct.String.html#method.add) 方法，这里 `add()` 方法的第二个参数是一个引用的类型。因此我们在使用 `+` 时， 必须传递切片引用类型。不能直接传递 `String` 类型。**`+` 是返回一个新的字符串，所以变量声明可以不需要 `mut` 关键字修饰**。
 
 示例代码如下：
 
@@ -508,7 +508,7 @@ fn main() {
     let string_rust = String::from("rust");
     // &string_rust会自动解引用为&str
     let result = string_append + &string_rust;
-    let mut result = result + "!";
+    let mut result = result + "!"; // `result + "!"` 中的 `result` 是不可变的
     result += "!!!";
 
     println!("连接字符串 + -> {}", result);
@@ -600,6 +600,7 @@ fn main() {
     );
 
     // 换行了也会保持之前的字符串格式
+    // 使用\忽略换行符
     let long_string = "String literals
                         can span multiple lines.
                         The linebreak and indentation here ->\
@@ -712,11 +713,11 @@ for b in "中国人".bytes() {
 
 ## 课后练习
 > Rust By Practice，支持代码在线编辑和运行，并提供详细的习题解答。
-> - [字符串](https://zh.practice.rs/compound-types/string.html)
+> - [字符串](https://practice-zh.course.rs/compound-types/string.html)
 >     - [习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/compound-types/string.md)
-> - [切片](https://zh.practice.rs/compound-types/slice.html)
+> - [切片](https://practice-zh.course.rs/compound-types/slice.html)
 >     - [习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/compound-types/slice.md)
-> - [String](https://zh.practice.rs/collections/String.html)
+> - [String](https://practice-zh.course.rs/collections/String.html)
 >     - [习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/collections/String.md)
 
 <hr />

@@ -476,7 +476,7 @@ help: consider using one of the available lifetimes here
   |                                                +++++++++
 ```
 
-不得不说，Rust 编译器真的很强大，还贴心的给我们提示了该如何修改，虽然。。。好像。。。。它的提示貌似不太准确。这里我们更希望参数和返回值都是 `'a` 生命周期。
+不得不说，Rust 编译器真的很强大，还贴心的给我们提示了该如何修改，虽然……好像……。它的提示貌似不太准确。这里我们更希望参数和返回值都是 `'a` 生命周期。
 
 ## 方法中的生命周期
 
@@ -619,7 +619,7 @@ let s: &'static str = "我没啥优点，就是活得久，嘿嘿";
 - 生命周期 `'static` 意味着能和程序活得一样久，例如字符串字面量和特征对象
 - 实在遇到解决不了的生命周期标注问题，可以尝试 `T: 'static`，有时候它会给你奇迹
 
-> 事实上，关于 `'static`, 有两种用法: `&'static` 和 `T: 'static`，详细内容请参见[此处](https://course.rs/advance/lifetime/static.html)
+> 事实上，关于 `'static`, 有两种用法: `&'static` 和 `T: 'static`，详细内容请参见[此处](https://course.rs/advance/lifetime/static.html)。
 
 ## 一个复杂例子: 泛型、特征约束
 
@@ -649,7 +649,7 @@ where
 
 ## 课后练习
 
-> [Rust By Practice](https://zh.practice.rs/lifetime/basic.html)，支持代码在线编辑和运行，并提供详细的习题解答。（本节暂无习题解答）
+> [Rust By Practice](https://practice-zh.course.rs/lifetime/basic.html)，支持代码在线编辑和运行，并提供详细的习题解答。（本节暂无习题解答）
 
 ## 总结
 

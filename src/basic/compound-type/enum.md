@@ -41,6 +41,7 @@ fn main() {
 }
 
 fn print_suit(card: PokerSuit) {
+    // 需要在定义 enum PokerSuit 的上面添加上 #[derive(Debug)]，否则会报 card 没有实现 Debug
     println!("{:?}",card);
 }
 ```
@@ -191,7 +192,7 @@ fn new (stream: TcpStream) {
   // websocket是一个WebSocket<TcpStream>或者
   //   WebSocket<native_tls::TlsStream<TcpStream>>类型
   websocket = WebSocket::from_raw_socket(
-    stream, ......)
+    s, ......)
 }
 ```
 
@@ -291,4 +292,4 @@ let none = plus_one(None);
 
 ## 课后练习
 
-> [Rust By Practice](https://zh.practice.rs/compound-types/enum.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/compound-types/enum.md)。
+> [Rust By Practice](https://practice-zh.course.rs/compound-types/enum.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/compound-types/enum.md)。

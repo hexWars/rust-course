@@ -148,7 +148,7 @@ println!("{:#?}", array);
 **正确的写法**，应该调用`std::array::from_fn`
 
 ```rust
-let array: [String; 8] = core::array::from_fn(|i| String::from("rust is good!"));
+let array: [String; 8] = std::array::from_fn(|_i| String::from("rust is good!"));
 
 println!("{:#?}", array);
 ```
@@ -216,4 +216,4 @@ fn main() {
 
 ## 课后练习
 
-> [Rust By Practice](https://zh.practice.rs/compound-types/array.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/compound-types/array.md)。
+> [Rust By Practice](https://practice-zh.course.rs/compound-types/array.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/compound-types/array.md)。

@@ -59,7 +59,7 @@ fn largest<T>(list: &[T]) -> T {
 
 总之，我们可以这样理解这个函数定义：函数 `largest` 有泛型类型 `T`，它有个参数 `list`，其类型是元素为 `T` 的数组切片，最后，该函数返回值的类型也是 `T`。
 
-具体的泛型函数实现如下：
+下面是一个错误的泛型函数的实现：
 
 ```rust
 fn largest<T>(list: &[T]) -> T {
@@ -467,7 +467,7 @@ fn main() {
 ## 课后练习
 
 > Rust By Practice，支持代码在线编辑和运行，并提供详细的习题解答。
-> - [泛型](https://zh.practice.rs/generics-traits/generics.html)
+> - [泛型](https://practice-zh.course.rs/generics-traits/generics.html)
 >     - [习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/generics-traits/generics.md)
-> - [const 泛型](https://zh.practice.rs/generics-traits/const-generics.html)
+> - [const 泛型](https://practice-zh.course.rs/generics-traits/const-generics.html)
 >     - [习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/generics-traits/const-generics.md)

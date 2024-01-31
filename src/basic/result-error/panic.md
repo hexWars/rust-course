@@ -61,7 +61,7 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 
 以上信息包含了两条重要信息：
 
-- `main` 函数所在的线程崩溃了，发生的代码位置是 `src/main.rs` 中的第 2 行第 5 个字符（去除该行前面的空字符）
+- `main` 函数所在的线程崩溃了，发生的代码位置是 `src/main.rs` 中的第 2 行第 5 个字符（包含该行前面的空字符）
 - 在使用时加上一个环境变量可以获取更详细的栈展开信息：
   - Linux/macOS 等 UNIX 系统： `RUST_BACKTRACE=1 cargo run`
   - Windows 系统（PowerShell）： `$env:RUST_BACKTRACE=1 ; cargo run`
@@ -214,4 +214,4 @@ let home: IpAddr = "127.0.0.1".parse().unwrap();
 
 ## 课后练习
 
-> [Rust By Practice](https://zh.practice.rs/result-panic/panic.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/result-panic/panic.md)。
+> [Rust By Practice](https://practice-zh.course.rs/result-panic/panic.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/result-panic/panic.md)。

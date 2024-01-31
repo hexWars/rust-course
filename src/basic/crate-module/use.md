@@ -57,7 +57,7 @@ pub fn eat_at_restaurant() {
 - 需要引入同一个模块的多个函数
 - 作用域中存在同名函数
 
-在以上两种情况中，使用 `use front_of_house::hosting` 引入模块要比 `use front_of_house::hosting::add_to_waitlist;` 引入函数更好。
+在以上两种情况中，使用 `use front_of_house::hosting;` 引入模块要比 `use front_of_house::hosting::add_to_waitlist;` 引入函数更好。
 
 例如，如果想使用 `HashMap`，那么直接引入该结构体是比引入模块更好的选择，因为在 `collections` 模块中，我们只需要使用一个 `HashMap` 结构体：
 
@@ -468,4 +468,4 @@ fn main() {
 
 ## 课后练习
 
-> [Rust By Practice](https://zh.practice.rs/crate-module/use-pub.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/crate-module/use-pub.md)。
+> [Rust By Practice](https://practice-zh.course.rs/crate-module/use-pub.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/crate-module/use-pub.md)。

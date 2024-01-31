@@ -1,6 +1,6 @@
 # 特征 Trait
 
-如果我们想定义一个文件系统，那么把该系统跟底层存储解耦是很重要的。文件操作主要包含四个：`open` 、`write`、`read`、`close`，这些操作可以发生在硬盘，可以发生在内存，还可以发生在网络IO甚至(...我实在编不下去了，大家来帮帮我)。总之如果你要为每一种情况都单独实现一套代码，那这种实现将过于繁杂，而且也没那个必要。
+如果我们想定义一个文件系统，那么把该系统跟底层存储解耦是很重要的。文件操作主要包含四个：`open` 、`write`、`read`、`close`，这些操作可以发生在硬盘，可以发生在内存，还可以发生在网络IO甚至（...我实在编不下去了，大家来帮帮我）。总之如果你要为每一种情况都单独实现一套代码，那这种实现将过于繁杂，而且也没那个必要。
 
 要解决上述问题，需要把这些行为抽象出来，就要使用 Rust 中的特征 `trait` 概念。可能你是第一次听说这个名词，但是不要怕，如果学过其他语言，那么大概率你听说过接口，没错，特征跟接口很类似。
 
@@ -175,7 +175,7 @@ pub fn notify(item: &impl Summary) {
 }
 ```
 
-`impl Summary`，只能说想出这个类型的人真的是起名鬼才，简直太贴切了，故名思义，它的意思是 **实现了`Summary`特征** 的 `item` 参数。
+`impl Summary`，只能说想出这个类型的人真的是起名鬼才，简直太贴切了，顾名思义，它的意思是 **实现了`Summary`特征** 的 `item` 参数。
 
 你可以使用任何实现了 `Summary` 特征的类型作为该函数的参数，同时在函数体内，还可以调用该特征的方法，例如 `summarize` 方法。具体的说，可以传递 `Post` 或 `Weibo` 的实例来作为参数，而其它类如 `String` 或者 `i32` 的类型则不能用做该函数的参数，因为它们没有实现 `Summary` 特征。
 
@@ -580,4 +580,4 @@ fn main() {
 
 ## 课后练习
 
-> [Rust By Practice](https://zh.practice.rs/generics-traits/traits.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/generics-traits/traits.md)。
+> [Rust By Practice](https://practice-zh.course.rs/generics-traits/traits.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/generics-traits/traits.md)。

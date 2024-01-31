@@ -110,7 +110,7 @@ pub struct Screen {
 
 可以通过 `&` 引用或者 `Box<T>` 智能指针的方式来创建特征对象。
 
-> `Box<T>` 在后面章节会[详细讲解](https://course.rs/advance/smart-pointer/box.html)，大家现在把它当成一个引用即可，只不过它包裹的值会被强制分配在堆上
+> `Box<T>` 在后面章节会[详细讲解](https://course.rs/advance/smart-pointer/box.html)，大家现在把它当成一个引用即可，只不过它包裹的值会被强制分配在堆上。
 
 
 ```rust
@@ -206,7 +206,7 @@ impl<T> Screen<T>
 
 上面的 `Screen` 的列表中，存储了类型为 `T` 的元素，然后在 `Screen` 中使用特征约束让 `T` 实现了 `Draw` 特征，进而可以调用 `draw` 方法。
 
-但是这种写法限制了 `Screen` 实例的 `Vec<T>` 中的每个元素必须是 `Button` 类型或者全是 `SelectBox` 类型。如果只需要同质（相同类型）集合，更倾向于这种写法：使用泛型和 特征约束，因为实现更清晰，且性能更好(特征对象，需要在运行时从 `vtable` 动态查找需要调用的方法)。
+但是这种写法限制了 `Screen` 实例的 `Vec<T>` 中的每个元素必须是 `Button` 类型或者全是 `SelectBox` 类型。如果只需要同质（相同类型）集合，更倾向于采用泛型+特征约束这种写法，因其实现更清晰，且性能更好(特征对象，需要在运行时从 `vtable` 动态查找需要调用的方法)。
 
 现在来运行渲染下咱们精心设计的 UI 组件列表：
 
@@ -381,4 +381,4 @@ error[E0038]: the trait `std::clone::Clone` cannot be made into an object
 
 ## 课后练习
 
-> [Rust By Practice](https://zh.practice.rs/generics-traits/trait-object.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/generics-traits/trait-object.md)。
+> [Rust By Practice](https://practice-zh.course.rs/generics-traits/trait-object.html)，支持代码在线编辑和运行，并提供详细的[习题解答](https://github.com/sunface/rust-by-practice/blob/master/solutions/generics-traits/trait-object.md)。
